@@ -342,10 +342,17 @@ A manager should provide for their teams:
 Concept of less is more, one example is not focusing on elements of little value, pick off the 'low-hanging fruit' that offers the most instant value rather than prototyping and planning endlessly\\
 Be able to decide \& justify what features you would promise to a customer given some tasks, velocities, etc.\\
 forming, storming, norming, performing\\
+\includegraphics[width=8cm, height=8cm]{development}\\
 Servant leader vs regular leader. Encourages ideas rather than giving answers, builds trust, is people-focused. Encourages team members to find own answers to questions, enables them and provides required resources.\\
 Levels of authority
 \begin{enumerate}
-\item 
+\item Tell
+\item Sell
+\item Consult
+\item Join
+\item Advise
+\item Confirm
+\item Delegate
 \end{enumerate}
 Look at the video on the submarine captain, reflect on leadership styles, what we can gain from each of them. Products should be busy, rather than team members \\
 Concept of the sphere of influence, don't focus on things you have little impact on\\
@@ -380,11 +387,19 @@ Principles of continuous integration
 Single source of truth/information for the software product, defined pulling and merging procedures\\
 Version vs revision vs branch vs baseline
 \begin{itemize}
+\item Configuration item: file/document
+\item Version: sequentially stored chagnes of configuration item
+\item Revision: change to document's contents
+\item Branch: changes in configuration item isolated from other cahnges
+\item Baseline: specific version of each CI at a certain occasion, can be used as logical basis for test/release
+\end{itemize}
+\begin{itemize}
 \item 
 \end{itemize}
 Test prioritization
 \begin{itemize}
-\item Usually done statistically based on the set of tests that commonly fail in relation to modifications in the given component of the product.
+\item Usually done statistically based on the set of tests that commonly fail in relation to modifications in the given component of the product.\\
+Collect which modules/components were changed, sort tests by fail frequency in connection to these changes/modules, choose a cutoff criteria for the ranked test list
 \end{itemize}
 Delivery vs deployment
 \begin{itemize}
@@ -402,7 +417,30 @@ Deployment practices (Name at least 3)
 \end{enumerate}
 DevOps, conflicts, why prod and dev. environments should not be different
 \begin{itemize}
-\item 
+\item DevOps = development + operations
+\item Automate everything, identical dev \& deployment environments, Source control system, performance monitoring, \& optimization in real time, measure everything
+\end{itemize}
+CI principles
+\begin{itemize}
+\item Maintain Single Source Repository
+\item Small and Frequent Commits
+\item Fail fast, fix fast
+\item Follow your commit
+\item Automate the flow
+\item Everyone can see what's happening
+\end{itemize}
+CI practices
+\begin{itemize}
+\item Don’t check in on a broken build
+\item  Always run all commit tests locally before committing (if not your Ci
+server does it for you)
+\item Wait for commit test to pass before moving on
+\item Never go home on a broken build
+\item Always be prepared to revert to previous revision
+\item Time-box fixing before reverting
+\item Don’t comment out failing tests
+\item Take responsibility for all breakage that result from your changes
+\item Test driven development 
 \end{itemize}
 SAFe (Scaled Agile Framework) Principles
 \begin{enumerate}
