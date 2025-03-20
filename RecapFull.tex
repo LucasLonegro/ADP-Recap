@@ -36,7 +36,67 @@ Agile principles
 Practices
 \begin{itemize}
 \item Daily meeting\\
-Coordinate 24hrs team plan, raise blockers. What did you do? what will you do? any blockers?
+Coordinate 24hrs team plan, raise blockers. What did you do? what will you do? any blockers?. Around 15 min, no technical discussion allowed
+\item Planning game/poker\\
+Onsite customer/PO prioritizes stories, developers estimate them, game finishes when all agreed on estimate
+\item Continuous Integration\\
+Reduce tech debt by bringing together software/product components frequently. Automated build detects integration errors.
+\item Retrospective\\
+What went well? What went less well? How do we improve? Team + coach (SM), PO can attend
+\begin{enumerate}
+\item Brainstorm subjects to improve
+\item Vote on highest priority improvement
+\item Do short analysis
+\item Create improvement story, place it atop next sprint backlog
+\item Schedule Problem Solving Workshop if necessary
+\end{enumerate}
+\item Shared code ownership \& cross-functional teams - it's lower down in this file
+\item TDD, Refactoring also lower down
+\end{itemize}
+XP Values
+\begin{itemize}
+\item Communication - everyone on team works jointly on all stages
+\item Simplicity - write simple code
+\item Feedback - deliver frequently \& get feedback on reliveries
+\item Respect
+\item Courage - Evaluate own results without making excuses, be ready to respond to change
+\end{itemize}
+XP Principles
+\begin{itemize}
+\item Rapid Feedbvack - Team members understand and respond to feedbvack
+\item Assumed simplicity - Follow YAGNI and DRY
+\item Incremental changes - Small changes to the product
+\item Embracing change - if client requests changes, support the decision and plan implementing the reqs.
+\item Quality work - Team works well, makes a valuable product, is proud of it
+\end{itemize}
+XP Practices
+\begin{itemize}
+\item Pair programming
+\item Onsite-Customer
+\item Test-first
+\item Planning game
+\item Feedback
+\item Continuous process - Small releases, CI, Refactoring
+\item Programmer welfare - sustainable pace
+\item Shared understanding- Coding standards, Collective Code Ownership, System metaphor, simple design
+\end{itemize}
+Scrum roles
+\begin{itemize}
+\item Product Owner maximizes value added by owning and deciding on priorities in the Team Backlog from a business perspective. Maintains technical integrity of features + components
+\item Dev teammember is part of cross-functional team accountable for providing value to the larger solutions/systems
+\item Scrum master is a servant leader + coach that uses/enforces Agile practices (sprint planning, dailys, demos, retrospectives). Focus opn flow and continuous improvements
+\end{itemize}
+Product backlog
+\begin{itemize}
+\item List of prioritized things to be done
+\item Continuously updates (never complete)
+\item DEEP: Detailed appropriately, Emergent, Estimated, Prioritized
+\end{itemize}
+A product backlog is the aggregation of all the project backlogs pertinent to the product.
+\begin{itemize}
+\item Acceptance criteria: define scope of user story/feature/capability
+\item DoR: List of criteria for a user story/features/capability to be pulled from backlog
+\item DoD: Criteria to consider accepted
 \end{itemize}
 If stuck, reduce functionality and keep to the schedule, instead of trying to modify the schedule or add developers
 \begin{itemize}
@@ -165,7 +225,15 @@ Also, someone tell the student representatives that is the professor wants to fo
 \end{itemize}
 Product backlog, why it should be detailed, what a DEEP backlog is, why we want ONE product backlog\\
 Difference between project and product\\
-User stories, INVEST format\\
+User stories, INVEST format
+\begin{itemize}
+\item Independent
+\item Negotiable
+\item Valuable
+\item Estimable
+\item Small
+\item Testable
+\end{itemize}
 Be able to break down a functionality into around 10 user stories:\\
 \includegraphics[width=12cm, height=10cm]{userstories-flowchart}\\
 Functional vs Non-functional requirements
@@ -183,12 +251,51 @@ Be able to explain a proposed-job allocation as PO or SM\\
 Story points are estimations of the amount of effort (sometimes time) required to complete an element in a backlog (usually user story/task)\\
 Sprint 0 is a preliminary sprint often added on Scrum methodologies for dealing with architectural/tech stack planning, definitions of DoD, product vision, etc. (all those small big upfronts we all hate)\\
 Burnup and Burndown charts, watch a slide idk\\
+\includegraphics[width=10cm, height=5cm]{Burndown}\\
+\includegraphics[width=10cm, height=15cm]{Burndown2}\\
 Lean originates in manufacturing, Scrum in software dev.\\
 Lean principles:
 \begin{itemize}
-\item Reduce waste
-\item Minimize WIP I think
+\item Eliminate waste:\\
+Tool: \begin{enumerate}
+\item Inventory/partially done work
+\item Extra processing - paperwork
+\item Over production - unused features
+\item Transportation - task switching
+\item Waiting - staffing, approval, review, excessive reqs., testing, deployment
+\item Motion - handovers, finding answers to questions
+\item Defects
+\end{enumerate}
+Tool: Value Stream Mapping\\
+\includegraphics[width=16cm, height=4cm]{VSM}
+\item Amplify learning - Incorporate feedback from dev, tests, retrospectives, etc. into development process\\
+Tool: Feedback\\
+Tool: Short iterations; increase control, help sync devs and customer, force decisions to be made\\
+Tool: Synchronization: Daily scrum, build, system test, weekly push to master, weekly meetings (scrum-of-scrum)
+\item Decide as late as possible\\
+Keep options open as long as is practical, allows you to survey landscape, delay detailed decisions, breadth-first development allows managing risk\\
+Tool: Last responsible moment - that in which failing to make a decision eliminates an important alternative
+\item Deliver as fast as possible: Limit WIP by delivering fast, faster delivery increases customers' business flexibility, prevents them changing their minds, keeps resources from getting tied up in WIP. The faster you deliver, the longer you can delay decisions\\
+Tool: Pull system; every team member knows how to contribute best, everyone sees what's going on, what needs to be done, what problems exists, what progress is being made\\
+Tool: Queuing theory; Cycle time is the measurement of a queue, minimize cycle time. Consider arrival rate, service rate, resource load\\
+\includegraphics[width=10cm, height=8cm]{Batch}\\
+\includegraphics[width=10cm, height=8cm]{Queue}\\
+Tool: Cost of delay; from an economic model, show how revenue and market share affect profits in relationship to delays
+\item Empower the team: Move decisions to the lowest level possible while developing the capacity of those people to make decisions wisely\\
+Tool: Leadership
+\item See the whole: Software systems are not just the sum of their parts, but the product of their interactions. Avoid local sub-optimization\\
+Tool: Contracts
 \end{itemize}
+Lean process:
+\begin{enumerate}
+\item Identify value
+\item Map value streams, visualize with Kanban board\\
+\includegraphics[width=10cm, height=8cm]{KBoard}
+\item Create flow, limiting WIP
+\item Establish pull from common prioritized backlog, clear rules for moving tasks in Kanban board
+\item Seek perfection, constantly remove waste
+\end{enumerate}
+Agile focuses on local-level communication, Lean advocates holistic view of delivery change, XP advocates 'decide now, change later', Lean defers commitment
 Global optimization\\
 Value Stream Mapping + Know how to improve the efficiency of a given development process\\
 'Last responsible moment' for decision making\\
@@ -202,14 +309,27 @@ How small vs large batches pass through the process, diagram showing how batch s
 Difference between Lean, Agile, Kanban, XP, etc.\\
 Kanban
 \begin{itemize}
+\item Pull system that visualizes workflow and uses WIP to facilitate flow
 \item The Kanban board
 \item Kanban phases
 \end{itemize}
-Kanban principles (?)
+Kanban principles
 \begin{itemize}
-\item 
+\item Start with what you do now
+\item Agree to pursue incremental evolutionary change
+\item Respect current process, roles, responsibility, titles
+\item Leadership at all levels
 \end{itemize}
-Scrumban, which aspects of each can be integrated in what scenarios\\
+Kanban Practices
+\begin{itemize}
+\item Visualize workflow to understand \& improve
+\item Limit WIP
+\item Manage flow
+\item Make policies explicit
+\item Implement feedback loops
+\item Improve collaboratively, evolve experimentally - whole team shares theory on why small change helps
+\end{itemize}
+Scrumban, which aspects of each can be integrated in what scenarios. Read through Lecture 4 table on SCrum vs Kanban\\
 Lean focuses on frequent deliveries and quality, XP deals with these aspects indirectly\\
 Kaizen - Continuous improvement\\
 Agile leadership, the triangle of FUNCTIONALITY, TIME, COST ( + QUALITY)\\
@@ -324,7 +444,7 @@ Shared services \& system team outside ART
 \item 
 \end{itemize}
 Backlogs and roles on different levels of the framework. Epics are broken down into Capabilities, Capabilities into features, features into stories\\
-Define 'the visions' of a company given its product (what kind of snake oil salesman shit is this)\\
+Define 'the visions' of a company given its product (what kind of snake oil salesman shit is this)
 
 product refers to an ongoing offering/service that provides value to userse, it is continuously improved, sold, maintained. A project refers to a temporary effort to create a specific deliverable within a timeline, scope, budget
 \end{document}
